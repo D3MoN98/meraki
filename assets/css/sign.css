@@ -1,0 +1,157 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+body{
+	background-image: url('http://localhost/meraki/assets/img/accessories-accessory-bag-322207_50.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+}
+h1,h1>a{
+	font-family: 'Permanent Marker', cursive;
+	text-decoration: none;
+    color: #D8D8D8;
+    text-align: center;
+    padding: 10px;
+}
+#sign_form_wrapper{
+	/*height: auto;*/
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+#sign_form{
+	flex: 0 1 450px; 
+	display: flex;
+	flex-flow: column;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	color: grey;
+}
+#sign_form h2{
+	padding: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#sign_form #api{
+	display: flex;
+	padding: 10px 0;
+	justify-content: space-between;
+}
+#api a{
+	flex: 0 1 48%;
+	padding: 8px;
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	color: white;
+	text-align: center;
+	border-radius: 3px;
+}
+#api a:nth-child(1){
+	background-color: #4267B2;
+}
+#api a:nth-child(2){
+	background-color: #DC4C41;
+}
+#api a i{
+	float: left;
+	font-size: 20px;
+}
+#sign_form>span{
+	text-align: center;
+	display: block;
+	font-size: 14px;
+	color: red;
+}
+#sign_form form{
+	display: flex;
+	flex-flow: column wrap;
+	color: #3d3d3d;
+}
+#sign_form form input{
+	width: 100%;
+	margin-top: 5px;
+	padding: 12px;
+	border: 1px solid #b5b5b5;
+	border-radius: 5px;
+	outline: 0;
+}
+#sign_form form label{
+	margin-bottom: 20px;
+}
+#sign_form form .error{
+	font-size: 12px;
+	color: red;
+}
+#password_progressbar{
+    height: 5px;
+    width: 0;
+    border-radius: 2px;
+    background-color: grey;
+}
+#sign_form form input[type="checkbox"]{
+	width: initial;
+}
+#sign_form form button{
+	padding: 12px;
+	background-color: #399ad6;
+	border: 0;
+	outline: 0;
+	border-radius: 5px;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+}
+#sign_form form>div{
+	margin-bottom: 20px;
+}
+#sign_form>p{
+	padding: 12px;
+	text-align: center;
+}
+#sign_form>p a{
+	color: #399ad6;
+	font-size: 15px;
+	text-decoration: none; 
+}
+@media only screen and (max-width: 600px){
+	body{
+		opacity: 1;
+	}
+	#sign_form_wrapper{
+		padding: initial;
+	}
+	#sign_form{
+		flex: 0 1 100%;
+	}
+	#sign_form form input{
+		margin-bottom: 10px;
+		padding: 8px;
+	}
+	#sign_form form button{
+		padding: 8px;
+	}
+	#sign_form input#password{
+		margin-bottom: 0;
+	}
+}
+@media only screen and (max-width: 450px){
+	#sign_form #api{
+		flex-flow: column;
+	}
+	#api a{
+		margin-bottom: 10px;
+	}
+}

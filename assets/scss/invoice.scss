@@ -1,0 +1,86 @@
+#invoice_container{
+	padding: 40px;
+	font-size: 12px;
+}
+#invoice_header{
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	h1{
+		flex: 0 1 30%;
+	}
+	&>h1:nth-child(1){
+		font-family: 'Montserrat', sans-serif;
+		letter-spacing: 2px;
+		font-weight: 800;
+		color:  $h2Color;
+	}
+	
+	&>h1:nth-child(2){
+		font-family: 'Montserrat', sans-serif;
+		float: right;
+		letter-spacing: 2px;
+		font-weight: 800;
+		color: $btn1;
+	}
+
+}
+#invoice_body_1{
+	padding: 20px 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	&>div{
+		flex: 0 1 30%;
+		pre,p{
+			padding: 2px;
+		}
+		b{
+			color: $btn1;
+			letter-spacing: 2px;
+		}
+	}
+}
+#invoice_body_2{
+	padding: 20px 0;
+	span{
+		margin-right: 100px;
+	}
+}
+
+#invoice_body_3{
+	padding: 20px 0;
+	table{
+		width: 100%;
+	    empty-cells: hide;
+	    border-collapse: separate;
+	    border-spacing: 0;
+	}
+	thead td{
+		padding: 10px;
+		font-size: 12px;
+		letter-spacing: 2px;
+		text-align: center;
+		border-bottom: 1px solid $btn1;
+		font-weight: bold;
+		color: $btn1;
+	}
+	tbody td{
+		padding: 15px;
+		font-size: 10px;
+		text-align: center;
+		
+	}
+	tfoot td{
+		font-size: 12px;
+		letter-spacing: 2px;
+		font-weight: bold;
+		padding: 10px;
+		border-top: 1px solid $btn1;
+		text-align: center;
+	    border-spacing: 0;
+		color: $btn1;
+	}
+	tfoot td:nth-child(5){
+	}
+}

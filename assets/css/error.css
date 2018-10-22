@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+*{
+	margin: 0;
+	padding: 0;
+}
+.frame {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	border-radius: 2px;
+    background-color: rgba(0,0,0,0.7);
+	color: #415868;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.modal {
+  	margin: 100px auto;
+  	width: 40%;
+	background: #fff;
+	border-radius: 3px;
+    box-shadow: 4px 2px 10px 0 rgba(0,0,0,0.4);
+	text-align: center;
+	overflow: hidden;
+	animation: show-modal .7s ease-in-out;
+	
+}
+
+.modal i{
+	padding: 10px;
+	font-size: 40px;
+	background: white;
+	color: #EC3434;
+}
+
+.modal p:nth-child(2) {
+	display: block;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 400;
+	padding: 10px;
+	color: #EC3434;
+	
+}
+
+.modal span{
+	font-weight: 300;
+	line-height: 19px;
+	padding: 20px;
+}
+
+.modal a {
+	padding: 5px;
+	text-decoration: none;
+	display: block;
+	background: #F65656;
+	color: #fff;
+	line-height: 40px;
+	font-weight: 400;
+	cursor: pointer;
+	transition: background .3s ease-in-out;
+}
+.modal a:hover{
+	background: #EC3434;
+}
+
+@keyframes show-modal {
+	0% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(.95);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 600px){
+	.modal{
+		width: 100%;
+	}
+}

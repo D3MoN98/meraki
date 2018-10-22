@@ -1,0 +1,446 @@
+#products{
+	flex: 1 0 80%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	position: relative;
+	&>p{
+		margin: auto;
+		font-size: 20px;
+		letter-spacing: 2px;
+	}
+	.products {
+		margin: 10px;
+		width: calc((100% - 6*10px)/3);
+		text-align: center;
+		position: relative;
+	}
+	img{
+		height: auto;
+		width: 100%;
+		&:hover{
+			opacity: 0.9;
+			filter: alpha(opacity=90);
+		}
+	}
+	a{
+		@include link;
+		font-size: 15px;
+		line-height: 25px;
+	}
+	div{
+		flex: 1 1 100%;
+		align-self: flex-end;
+		display: flex;
+		justify-content: center;
+	}
+	button{
+		@include button;
+		padding: 10px 20px;
+		border-radius: 3px;
+		border: 1px solid $inputBorder;
+		letter-spacing: 2px;
+		i{
+			font-size: 12px;
+		}
+		&:hover{
+			color: $hColor;
+			border: 1px solid $hColor;
+		}
+	}
+}
+
+#product_container{
+	display: flex;
+	flex-flow: row wrap;
+	padding: 20px 50px;
+	aside{
+		flex: 1 1 55%;
+		&>div{
+			display: flex;
+			flex-flow: column wrap;
+			h2{
+				color: $hColor;
+				letter-spacing: 1px;
+				padding: 10px;
+			}
+		}
+	}
+	#product_images{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	#side_image{
+		flex: 1 1 20%;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		div{
+			width: 50%;
+			margin-bottom: 5px;
+			margin-top: 5px;
+			border: 1px solid $inputBorder;
+			border-radius: 5px;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: auto;
+			}
+			button{
+				@include button;
+				width: auto;
+				height: auto;
+				background-color: transparent;
+			}
+		}
+	}
+	#product_image{
+		flex: 1 1 80%;
+		position: relative;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	#product_details{
+		flex: 1 1 45%;
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 20px 50px 20px 5px;
+		&>p:nth-child(1){
+			font-size: 30px;
+			color: $hColor;
+			font-weight: bold;
+			span{
+				font-size: 14px;
+				color: $fontColor;
+			}
+		}
+		p:nth-child(2){
+			padding: 10px 0;
+			font-size: 12px !important;
+			.fa-star{
+				color: #CCCCCC;
+				font-size: 11px;
+			}
+			.active_star{
+				color: $fontColor;
+			}
+		}
+		p:nth-child(3){
+			padding: 10px 0;
+		}
+		#product_size{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: center;
+			margin: 40px 0;
+			position: relative;
+			div{
+				flex: 0 0 20%;
+			}
+			a{
+				@include link;
+				color: $linkColor2;
+				font-size: 14px;
+			}
+			select{
+				/*flex-flow: 0 1 45%;*/
+				padding-left: 10px;
+				width: 40%;
+				height: 50px;
+				border: 1px solid $inputBorder;
+				border-radius: 5px;
+			}
+		}
+		@include popuptext;
+		.popuptext{
+		    top: -75%;
+		    right: 0;
+		}
+		&>div:nth-child(5){
+			display: flex;
+			flex-flow: wrap;
+			justify-content: space-between;
+			margin: 20px 0;
+			button{
+				@include button;
+				height: 50px;
+				flex: 0 1 45%;
+				color: white;
+				background-color: $btn1;
+				border-radius: 5px;
+			}
+		}
+		&>div:nth-child(6){
+			font-weight: bold;
+			color: $hColor;
+			font-size: 20px;
+			text-align: center;
+			padding: 15px;
+		}
+		&>div:nth-child(7){
+			padding: 15px;
+			font-size: 14px;
+			text-align: center;
+		}
+		&>div:nth-child(8){
+			text-align: center;
+			margin: 0 30%;
+			border: 1px solid $inputBorder;
+			padding: 20px;
+		}
+	}
+	#extra_product{
+		flex: 1 1 100%;
+		display: flex;
+		flex-flow: column wrap;
+		padding: 0 40px;
+		&>p{
+			font-size: 20px;
+			letter-spacing: 2px;
+			padding: 10px 0;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+		&>div{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			div{
+				flex: 0 0 15%;
+				padding: 10px;
+				border: 1px solid $borderBottom;
+				border-radius: 5px;
+				&:hover{
+					border: 1px solid $inputBorder;
+				}
+			}
+		}
+		a{
+			@include link;
+			font-size: 14px;
+			display: block;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	#reviews{
+		flex: 1 1 100%;
+		padding: 0 40px;
+		margin-top: 20px;
+		&>p{
+			font-size: 20px;
+			letter-spacing: 2px;
+			padding: 10px 0;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+		button{
+			@include button;
+			background-color: $lightbg;
+			padding: 10px 15px;
+			border-radius: 3px;
+			letter-spacing: 1px;
+		}
+		form{
+			@include formButton;
+			display: none;
+			background-color: $lightbg;
+			padding: 15px;
+			margin: 10px 0;
+			&>span{
+				padding: 5px 0;
+				letter-spacing: 2px;
+				font-size: 14px;
+			}
+			&>input,&>textarea{
+				display: block;
+				margin: 5px 0 10px 0;
+				width: 60%;
+				padding: 10px;
+				border-radius: 3px;
+				border: 1px solid $inputBorder;
+			}
+		}
+		.reviews{
+			padding: 15px;
+			margin: 10px 0;
+			background-color: $lightbg;
+			border-radius: 3px;
+			i{
+				color: $fontColor2;
+			}
+			.fa-star{
+				color: #CCCCCC;
+				font-size: 15px;
+			}
+			.active_star{
+				color: $fontColor;
+			}
+			&>span:nth-child(1){
+				span:nth-child(2){
+					margin-left: 5px;
+					color: $h2Color;
+				}
+			}
+			&>p{
+				padding: 8px 0;
+				font-size: 15px;
+			}
+			&>div{
+				*{	
+					font-size: 13px;
+					margin-right: 5px;
+				}
+				div{
+					button{
+						padding: initial;
+						color: #CCCCCC;
+						
+					}
+					.active_like{
+						color: $fontColor;
+					}
+					*{
+						margin-left: 10px;
+					}
+					display: inline;
+					float: right;
+				}
+			}
+		}
+	}
+}
+#star_rating{
+	margin-bottom: 10px;
+	input{
+		display: none;
+	}
+	.fa-star{
+		cursor: pointer;
+		color: #CCCCCC;
+	}
+	.active_star{
+		color: $fontColor;
+	}
+
+}
+@media screen and (max-width: 992px) {
+	#products{
+		flex: 1 1 78%;
+		margin: 0;
+		.products {
+			flex: initial;
+			width: calc((100% - 4*10px)/2);
+		}
+	}
+	#product_container{
+		aside{
+			flex: 1 1 100%;
+			h2 {
+			    text-align: center;
+			    padding: 10px;
+			    font-size: 20px;
+			}
+
+		}
+		#product_image {
+		    flex: 1 1 100%;
+		}
+		#side_image {
+			order: 1;
+		    flex: 0 1 100%;
+		    display: flex;
+		    flex-flow: row wrap;
+		    align-items: center;
+		    div {
+			    width: 15%;
+			    margin: initial;
+			    margin-right: 10px; 
+			}
+		}
+		#product_details{
+			flex: 1 1 100%;
+		    padding: 20px 20px;
+		}
+		#extra_product{
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 600px){
+	#products {
+		flex: 1 0 100%;
+		.products {
+			width: calc((100% - 2*10px));
+		}
+	}
+	#product_container{
+		padding: 10px;
+		aside{
+			h2 {
+			    font-size: 18px;
+			}
+
+		}
+		#product_details{
+		    padding: 5px;
+		    p:nth-child(2) {
+			    font-size: 15px;
+			}
+			#product_size{
+				div {
+				    flex: 0 0 40%;
+				}
+				select {
+				    flex: 1 1 60%;
+				    height: 40px;
+				    border: 1px solid #898989;
+				    border-radius: 5px;
+				}
+				.popuptext{
+				    top: -100%;
+				    right: 0;
+				}
+			}
+			&>div:nth-child(5) {
+			    display: flex;
+			    flex-flow: column wrap;
+			    justify-content: space-between;
+			    button{
+					margin-bottom: 10px;
+				}
+			}
+			&>div:nth-child(8) {
+			    text-align: center;
+			    margin: 0 20%;
+			    border: 1px solid #727272;
+			    padding: 10px 20px;
+			}
+		}
+		#reviews{
+			padding: 0;
+			form{
+				input,textarea{
+					width: 100%;
+				}
+			}
+			.reviews{
+				position: relative;
+				&>div{
+					div{
+						position: absolute;
+						top: 15px;
+						right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+}
